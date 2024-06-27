@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="lightbox.css">
+    <script src="https://kit.fontawesome.com/09fa7b6258.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+    <div class="container">
+        <nav>
+            <a href="index.html">
+                <img src="images/TEST3.png" class="logo">
+            </a>
+            <ul id="sidemenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AboutUs.html"> About us</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                 <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="ContactUs.html">Contact Me</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i> 
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav> 
+    </div> 
+    <div class="container-gallery">
+        <div class="gallery">
+            <a href="images/Curry.jpg" data-lightbox="models" data-title="Stephen Cuury">
+                <img src="images/Curry.jpg">
+            </a>
+            <a href="images/putin.png" data-lightbox="models" data-title="putin">
+                <img src="images/putin.png">
+            </a>
+            <a href="images/messi.jpg" data-lightbox="models" data-title="Lionel Messi">
+                <img src="images/messi.jpg">
+            </a>
+            <a href="images/kylianMbappe.jpg" data-lightbox="models" data-title="Kylian Mbappe">
+                <img src="images/kylianMbappe.jpg">
+            </a>
+            <a href="images/chihuahua.png" data-lightbox="models" data-title="chihuahua">
+                <img src="images/chihuahua.png">
+            </a>
+            <a href="images/kigali.jpg" data-lightbox="models" data-title="City of Kigali">
+                <img src="images/kigali.jpg">
+            </a>
+            <a href="images/burger.png" data-lightbox="models" data-title="burger">
+                <img src="images/burger.png">
+            </a>
+            <a href="images/Drake.jpg" data-lightbox="models" data-title="Drake">
+                <img src="images/Drake.jpg">
+            </a>         
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Kalinda Made with <i class="fa-solid fa-heart"></i> </p>
+</div>
+<script src="lightbox-plus-jquery.js"></script> 
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Shit</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/09fa7b6258.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <a href="index.html">
+             <img src="images/TEST3.png" class="logo">
+            </a>
+            <ul id="sidemenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="AboutUs.html"> About us</a></li>
+                <li><a href="Gallery.html">Gallery</a></li>
+                 <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="ContactUs.html">Contact Me</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i> 
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Web Designer</p>
+            <h1>Hi, I'm <span>Kalinda</span><br>Fabrice From Kanombe</h1>
+        </div>
+    </div>
+</div> 
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+    var navLinks = document.querySelectorAll('ul li a');
+
+    function addDelayToLinks(event) {
+        event.preventDefault(); 
+        var targetUrl = this.getAttribute('href');
+        var delayTime = 1000;
+        setTimeout(function() {
+            window.location.href = targetUrl;
+        }, delayTime);
+    }
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', addDelayToLinks);
+    });
+
+</script>
+</body>
+</html>

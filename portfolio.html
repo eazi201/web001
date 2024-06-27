@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="https://kit.fontawesome.com/09fa7b6258.js" crossorigin="anonymous"></script>  
+</head>
+<body>
+ <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="images/TEST3.png" class="logo">
+                   </a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html"> About us</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                     <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="ContactUs.html">Contact Me</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+  
+      <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-1.png">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>The app Connects you to talented people
+                            Download it from Play Store</p>
+                       <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> 
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-2.png">
+                    <div class="layer">
+                        <h3>Online Shopping App</h3>
+                        <p>The app Connects you to talented people
+                            Download it from Play Store</p>
+                       <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> 
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.png">
+                    <div class="layer">
+                        <h3>Dating App</h3>
+                        <p>The app Connects you to talented people
+                            Download it from Play Store</p>
+                       <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a> 
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="Btn">See More</a>
+        </div>
+      </div> 
+</div>
+<script>
+    var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+    var navLinks = document.querySelectorAll('ul li a');
+
+    function addDelayToLinks(event) {
+        event.preventDefault(); 
+        var targetUrl = this.getAttribute('href');
+        var delayTime = 1000;
+        setTimeout(function() {
+            window.location.href = targetUrl;
+        }, delayTime);
+    }
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', addDelayToLinks);
+    });
+
+</script>
+</body>
+</html>

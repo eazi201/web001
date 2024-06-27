@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/09fa7b6258.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="images/TEST3.png" class="logo">
+                   </a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html"> About us</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                     <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="ContactUs.html">Contact Us</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+     
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/users.png">
+                </div>
+                
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                         Part-time superhero, 
+                         full-time expert in avoiding laundry piles. When not saving the world from mediocre websites, you'll find me pondering the meaning of life over one bottle of beer. If procrastination were an Olympic sport, I'd probably compete... eventually. Welcome to my corner of the internet, where humor meets coding prowess!"
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links"onclick="opentab('education')">Education</p>
+    
+                    </div>
+                    <div class="tab-contents active-tab" id="skills" >
+                        <ul>
+                            <li><span>Web Development</span><br>Designing Web App Interfaces</li>
+                            <li><span>Database Mantainance</span><br>Database Management</li>
+                            <li><span>Reverse Engineering</span><br>Cracking </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents"id="experience" >
+                        <ul>
+                            <li><span> Team Manager</span><br>At AnyApp </li>
+                            <li><span>Irembo Agent</span><br> 5 years</li>
+                            <li><span>Goose Farmer</span><br>4 years </li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Nursery School</span><br>Kindergaten </li>
+                            <li><span>Primary </span><br>It was very hard</li>
+                            <li><span>College</span><br> literaly i was about to die</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Design</h2>
+                    <p>Websites so sharp, they could cut through internet noise (figuratively, of course).Helping your website climb search engine rankings like a squirrel up a tree.</p>
+                         <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-network-wired"></i>
+                    <h2>Network Security</h2>
+                    <p> Protecting your data like it's the last slice of pizza in the office Because protecting your assets shouldn't feel like a root canal..</p>
+                         <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-database"></i>
+                    <h2>Database </h2>
+                    <p>
+                        Because updating your site should be easier than teaching a cat to fetch We Ensure your website stays relevant even as technology does its best to outpace us all..</p>
+                         <a href="#">Learn More</a>
+                </div>
+
+            </div>
+        </div>
+        
+    </div>
+    <div class="copyright">
+        <p>Copyright © Kalinda Made with <i class="fa-solid fa-heart"></i> </p>
+    <script>
+       var tablinks=document.getElementsByClassName("tab-links");
+       var tabcontents=document.getElementsByClassName("tab-contents");
+       function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-links");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabname).classList.add("active-tab");
+       }
+       var sidemenu=document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+    function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+    var navLinks = document.querySelectorAll('ul li a');
+
+    function addDelayToLinks(event) {
+        event.preventDefault(); 
+        var targetUrl = this.getAttribute('href');
+        var delayTime = 1000;
+        setTimeout(function() {
+            window.location.href = targetUrl;
+        }, delayTime);
+    }
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', addDelayToLinks);
+    });
+    </script>  
+</div>
+</body>
+</html>

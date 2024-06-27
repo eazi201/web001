@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/09fa7b6258.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="header">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="images/TEST3.png" class="logo">
+                   </a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="AboutUs.html"> About us</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                     <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="ContactUs.html">Contact Me</a></li>
+                    
+                </ul>
+            </nav>
+       <div id="contact">
+         <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1> 
+                    <p><i class="fa-solid fa-paper-plane"></i>kalinda05@yahoo.fr</p>
+                    <p><i class="fa-solid fa-phone"></i>0123456789</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-x-twitter"></i></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <a href="images/shitCV.pdf" download class="Btn Btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form >
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit "class="Btn Btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </div>
+     </div> 
+     <div class="copyright">
+        <p>Copyright © Kalinda Made with <i class="fa-solid fa-heart"></i> </p>
+     </div>
+     </div>
+     <script>
+        var sidemenu=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+        var navLinks = document.querySelectorAll('ul li a');
+    
+        function addDelayToLinks(event) {
+            event.preventDefault(); 
+            var targetUrl = this.getAttribute('href');
+            var delayTime = 1000;
+            setTimeout(function() {
+                window.location.href = targetUrl;
+            }, delayTime);
+        }
+        navLinks.forEach(function(link) {
+            link.addEventListener('click', addDelayToLinks);
+        });
+    
+    </script>
+    </body>
+</html>
